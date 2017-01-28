@@ -1,0 +1,142 @@
+<<!DOCTYPE html>
+<html>
+  <head>
+    <title>Zagęszczarki Kraków</title>
+    <meta charset="utf-8" />
+    <!-- USTAWIENIE VIEWPORT -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="description" content="Zagęszczarku Kraków">
+    <meta name="author" content="Joanna Okrajni">
+    <meta name="robots" content="index,follow" />
+    <!-- INSTALACJA BOOTSTRAP -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    
+    <!-- INSTALACJA CSS -->
+    <link rel="stylesheet" type="text/css" href="css/contact.css">
+    <!-- GOOGLE FONTS-->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+
+    <style type="text/css">
+            /* Set a size for our map container, the Google Map will take up 100% of this container */
+            #map {
+                width: 100%;
+                height: 350px;
+            }
+        </style>
+        
+        <!-- 
+            You need to include this script tag on any page that has a Google Map.
+
+            The following script tag will work when opening this example locally on your computer.
+            But if you use this on a localhost server or a live website you will need to include an API key. 
+            Sign up for one here (it's free for small usage): 
+                https://developers.google.com/maps/documentation/javascript/tutorial#api_key
+
+            After you sign up, use the following script tag with YOUR_GOOGLE_API_KEY replaced with your actual key.
+                <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_API_KEY"></script>
+        -->
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEVAE69qgEJ8sYMS8o-egLWVoans1MUrc"></script>
+
+        <script type="text/javascript">
+            // When the window has finished loading create our google map below
+            google.maps.event.addDomListener(window, 'load', init);
+        
+            function init() {
+                // Basic options for a simple Google Map
+                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+                var mapOptions = {
+                    // How zoomed in you want the map to start at (always required)
+                    zoom: 11,
+
+                    // The latitude and longitude to center the map (always required)
+                    center: new google.maps.LatLng(50.127601, 19.968653), // New York
+
+                    // How you would like to style the map. 
+                    // This is where you would paste any style found on Snazzy Maps.
+                    styles: [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"transit.station.bus","elementType":"labels.icon","stylers":[{"saturation":"-16"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#7c749a"},{"visibility":"on"}]}]
+                };
+
+                // Get the HTML DOM element that will contain your map 
+                // We are using a div with id="map" seen below in the <body>
+                var mapElement = document.getElementById('map');
+
+                // Create the Google Map using our element and options defined above
+                var map = new google.maps.Map(mapElement, mapOptions);
+
+                // Let's also add a marker while we're at it
+                var marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(50.127601, 19.968653),
+                    map: map,
+                    title: 'Snazzy!'
+                });
+            }
+        </script>
+
+
+  </head>
+  <body>
+        <!--NAGŁÓWEK-->
+    <nav class="navbar navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <!-- Grupowanie "marki" i przycisku rozwijania mobilnego menu -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Open nav</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Wynajem zagęszczarek</a>
+        </div>
+        <!-- Grupowanie elementów menu w celu lepszego wyświetlania na urządzeniach moblinych -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="about.html">O nas</a></li>
+            <li><a href="offer.html">Cennik</a></li>
+            <li><a href="gallery.html">FAQ</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- STOPKA --> 
+    <footer class="container-fluid">
+      <div class='row'>
+        <div class="col-md-4 text-center">
+          <h3>Zapraszamy</h3>
+          <p>Poniedziałek - Piątek</p><p>8:00 - 18:00</p>
+          <p> Sobota</p><p>10:00 - 16:00</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <h3>Kontakt</h3>
+          <p>tel: +48 123 123 123 </p>
+          <p>Ul. Warszawska 111</p>
+          <p>32-321 Kraków</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <h3>Copyright</h3>
+          <p><a href="http://jt-media.pl/"><img src="img/jtmedia.png"></a></p>
+        </div>
+      </div>
+    </footer>
+     <!-- MAPA -->
+    <section id="map"></section>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
+  </body>
+</html>
