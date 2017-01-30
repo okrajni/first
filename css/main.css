@@ -2,8 +2,10 @@ body{
   background-color: #dbdedd;
   color: #585f5e;
 }
-h1, h2 {
-	color: #c6c9c8;
+.container h1 {
+  margin: 50px 0;
+  font-size: 40px;
+  color: #585f5e;
   font-family: 'Josefin Sans', sans-serif;
 }
 .icon-bar{
@@ -35,14 +37,15 @@ nav a:hover{
   background: -moz-linear-gradient(#fff, #dbdedd, #dbdedd); /* For Firefox 3.6 to 15 */
   background: linear-gradient(#fff, #dbdedd, #dbdedd); /* Standard syntax */
 }
-.jumbotron h1 {
-  margin: 40px 0;
-  font-size: 40px;
-  color: #585f5e;
-  font-family: 'Josefin Sans', sans-serif;
-}
-.jumbotron p{
+
+p{
 	color: #585f5e;
+}
+.container{
+  margin-bottom: 20px;
+}
+.panel-heading{
+  background-color: #000;
 }
 
 footer {
@@ -52,6 +55,9 @@ footer {
   background: -moz-linear-gradient(#dbdedd, #fff); /* For Firefox 3.6 to 15 */
   background: linear-gradient(#dbdedd, #fff); /* Standard syntax */
 	color: #585f5e;
+}
+footer .col-md-4 {
+  margin-bottom: 50px;
 }
 footer img {
   width: 35%;
